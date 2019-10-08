@@ -1,0 +1,30 @@
+/* pages/catelgory/index.wxss */
+.category-view {
+  background-color: #eeeeee;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  overflow-y: auto;
+}
+.category-view__swiper-container {
+  padding: 20rpx;
+  height: 40rpx;
+  background-color: #003392;
+}
+.category-view__swiper-container__item {
+  height: auto !important;
+  color: #ffffff;
+}
+.category-view__goods-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+.category-view__goods-container__item {
+  width: 50%;
+  padding:20rpx;
+  box-sizing:border-box;
+
+}

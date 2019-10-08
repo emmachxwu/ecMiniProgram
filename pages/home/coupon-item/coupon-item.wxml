@@ -1,0 +1,19 @@
+<!--pages/home/coupon-item/coupon-item.wxml-->
+<wxs module="formatTime">
+  module.exports = function (time) {
+    return time.split(" ")[0]
+  }
+</wxs>
+<template name="coupon-item">
+  <view class="home-view__coupon-container__item">
+      <image src="../../assets/images/home-coupon-bg.png" class="home-view__coupon-container__item-bg" />
+      <view class="home-view__coupon-container__item-content">
+        <view class="home-view__coupon-container__item-content__line">
+          <text class="home-view__coupon-container__item-content__val">{{face_value}}</text>
+          <text class="home-view__coupon-container__item-content__val-subfix">折</text>
+          <button size="mini" class="home-view__coupon-container__item-content__btn">立即领劵</button>
+        </view>
+        <text>使用时间：{{formatTime(from_time)}}~{{formatTime(to_time)}}</text>
+      </view>
+    </view>
+</template> 

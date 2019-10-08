@@ -1,0 +1,22 @@
+<!--pages/home/index.wxml-->
+<import src="coupon-item/coupon-item.wxml" />
+
+<view class="home-view">
+  <swiper indicator-dots="{{swiperInit.indicatorDots}}" autoplay="{{swiperInit.autoplay}}" duration="{{swiperInit.duration}}" class="home-view__swiper-container">
+    <block wx:for="{{adLists}}" wx:key="{{item.id}}">
+      <swiper-item>
+        <image src="{{item.image_url}}" class="home-view__swiper-container__item" />
+      </swiper-item>
+    </block> 
+  </swiper>
+  <view class="home-view__coupon-container">
+    <block wx:for="{{couponLists}}" wx:key="{{item.coupon_id}}">
+      <template is="coupon-item" data="{{...item}}" />
+    </block> 
+  </view>
+  <view>
+    <view class="home-view__article-container">
+        <image class="home-view__article-container__item" wx:for="{{imageLists}}" wx:key="index" data-imageId="{{index}}" src="{{item}}" bindtap="onTapActicle" />
+    </view>
+  </view>
+</view>

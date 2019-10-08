@@ -1,0 +1,19 @@
+<!--component/good-item/good-item.wxml-->
+<wxs module="formatMoney">
+  module.exports = function (money) {
+    return '¥'+money
+  }
+</wxs>
+<view class="good-item-component" wx:if="{{ good }}" data-goodId="{{good.goods_id}}" bindtap="goGoodDetail">
+  <image class="good-item-component__image" src="{{ good.default_image_pic }}"></image>
+  <view class="good-item-component__detail">
+    <text class="good-item-component__detail__selling-point">{{ good.selling_point }}</text>
+    <view>
+      <view class="good-item-component__detail__tags" wx:if="{{ good.goods_tags.length > 0 }}">
+        <text class="good-item-component__detail__tag" wx:for="{{ good.goods_tags }}" wx:key="{{ item.tag_id }}">{{ item.tag_name }}</text>
+      </view>
+      <text class="good-item-component__detail__name">{{ good.name }}</text>
+    </view>
+    <text class="good-item-component__detail__price">{{ formatMoney(good.price) }}</text>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/catelgory/index.wxml-->
+<view class="category-view">
+  <swiper class="category-view__swiper-container" previous-margin="20px" next-margin="20rpx" display-multiple-items="4">
+    <block wx:for="{{categories}}" wx:key="{{ item.category_id }}">
+      <swiper-item class="category-view__swiper-container__item" data-categoryId="{{item.category_id}}" bindtap="handleCategoryGoods">
+        <text>{{ item.name }}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="category-view__goods-container" wx:if="{{ categoryGoods.length }}">
+    <good-item class="category-view__goods-container__item" wx:for="{{ categoryGoods }}" good="{{item}}"></good-item>
+  </view>
+  <view wx:else>暂时还没有数据哦</view>
+</view>
+

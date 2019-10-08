@@ -1,0 +1,39 @@
+/* component/good-item/good-item.wxss */
+.good-item-component {
+  display:flex;
+  flex-direction:column;
+  background-color: #ffffff;
+  padding: 10rpx;
+  height: 480rpx;
+}
+.good-item-component__image {
+  width: 100%;
+  height: 300rpx;
+}
+.good-item-component__detail {
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.good-item-component__detail__selling-point {
+  font-size: 28rpx;
+  font-weight: 400;
+}
+.good-item-component__detail__tag {
+  color: #ffffff;
+  font-size: 24rpx;
+  margin-right: 8rpx;
+  background: #FF5339;
+  border-radius: 8rpx;
+  padding: 0 4rpx;
+}
+.good-item-component__detail__name {
+  font-size: 24rpx;
+  color: #adadad;
+}
+.good-item-component__detail__price {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: red;
+}
